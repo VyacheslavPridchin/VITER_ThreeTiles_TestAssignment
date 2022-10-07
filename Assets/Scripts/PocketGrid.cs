@@ -14,6 +14,7 @@ public class PocketGrid : MonoBehaviour
     public UnityEvent PocketGridChanged = new UnityEvent();
     public PocketController[,] pockets;
 
+    // Spawn Grid of Pockets
     void Awake()
     {
         pockets = new PocketController[GridSize.x, GridSize.y];

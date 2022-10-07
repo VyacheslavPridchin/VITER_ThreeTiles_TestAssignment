@@ -43,8 +43,8 @@ public class PocketController : MonoBehaviour
 
         if (collision.gameObject == MyGraySquare)
         {
-            gsController.myPocketController = null;
-            gsController.myPrevPocketController = this;
+            gsController.MyPocketController = null;
+            gsController.MyPreviousPocketController = this;
             MyGraySquare = null;
             GraySquareChanged?.Invoke();
         }
@@ -54,14 +54,15 @@ public class PocketController : MonoBehaviour
     {
         GraySquareController gsController = transform.GetComponent<GraySquareController>();
         gsController.graySquareSprite.transform.position = gsController.graySquareSprite.transform.position - (this.transform.position - transform.position);
-        gsController.myPocketController = this;
-        gsController.myPrevPocketController = null;
+        gsController.MyPocketController = this;
+        gsController.MyPreviousPocketController = null;
         transform.position = this.transform.position;
         MyGraySquare = transform.gameObject;
 
         if (lockGraySquad) gsController.isLocked = true;
     }
-
+    
+    // Remove Object (GraySquare) from scene with animation
     public void RemoveGraySquare(float timeOffset)
     {
         GameObject removeableGO = MyGraySquare;
@@ -75,22 +76,22 @@ public class PocketController : MonoBehaviour
 
         Transform spriteRenderer = removeableGO.transform.GetChild(0);
 
+        // Animation: Scale to 1.2x
         Vector3 targetVector = Vector3.one * 1.3f;
         while (spriteRenderer.localScale.x < 1.2f)
         {
             spriteRenderer.localScale = Vector3.Lerp(spriteRenderer.localScale, targetVector, 4f * Time.deltaTime);
             yield return new WaitForEndOfFrame();
-            //Debug.Log("Change color");
         }
 
         yield return new WaitForSecondsRealtime(timeOffset);
 
+        // Animation: Scale to 0x
         targetVector = Vector3.zero;
         while (spriteRenderer.localScale.x > 0.01f)
         {
             spriteRenderer.localScale = Vector3.Lerp(spriteRenderer.localScale, targetVector, 7f * Time.deltaTime);
             yield return new WaitForEndOfFrame();
-            //Debug.Log("Change color");
         }
 
         Destroy(removeableGO);

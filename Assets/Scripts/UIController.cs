@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private Slider volumeSlider;
     public static UIController Singleton { get; private set; }
+
     private void Awake()
     {
         Singleton = this;

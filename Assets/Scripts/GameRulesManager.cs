@@ -13,7 +13,7 @@ public class GameRulesManager : MonoBehaviour
 
     private void MatchElements()
     {
-        //Vertical check
+        //Vertical match check
         for (int x = 0; x < pocketGrid.GridSize.x; x++)
         {
             bool thereAreFreePockets = false;
@@ -34,7 +34,7 @@ public class GameRulesManager : MonoBehaviour
             return;
         }
 
-        //Horizontal check
+        //Horizontal match check
         for (int y = 0; y < pocketGrid.GridSize.y; y++)
         {
             bool thereAreFreePockets = false;

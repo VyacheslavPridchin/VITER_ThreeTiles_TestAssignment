@@ -12,12 +12,12 @@ public class GraySquareController : MonoBehaviour
     public bool showIntendedPositionAndSize = false;
     [HideInInspector]
     public UnityEvent MouseUp = new UnityEvent();
-    public bool isLocked = false;
+    public PocketController MyPocketController { get; set; }
+    public PocketController MyPreviousPocketController { get; set; }
     private float startPosX = 0f;
     private float startPosY = 0f;
+    public bool isLocked = false;
     private int lastOrderInLayer;
-    public PocketController myPocketController { get; set; }
-    public PocketController myPrevPocketController { get; set; }
 
     private void OnMouseDown()
     {
@@ -47,7 +47,7 @@ public class GraySquareController : MonoBehaviour
         MouseUp?.Invoke();
         graySquareSprite.sortingOrder = lastOrderInLayer;
 
-        if (myPocketController == null) myPrevPocketController.SetGraySquareToPocket(transform);
+        if (MyPocketController == null) MyPreviousPocketController.SetGraySquareToPocket(transform);
     }
 
     private Vector2 GetMousePosition()
@@ -72,10 +72,10 @@ public class GraySquareController : MonoBehaviour
         else
         {
             graySquareSprite.transform.position = Vector2.Lerp(graySquareSprite.transform.position, transform.position, 15f * Time.deltaTime);
-            if (myPocketController == null)
+            if (MyPocketController == null)
                 graySquareSprite.size = Vector2.Lerp(graySquareSprite.size, new Vector2(1f, 1f), 10f * Time.deltaTime);
             else
-                graySquareSprite.size = Vector2.Lerp(graySquareSprite.size, myPocketController.pocketRegion.size / transform.lossyScale, 10f * Time.deltaTime);
+                graySquareSprite.size = Vector2.Lerp(graySquareSprite.size, MyPocketController.pocketRegion.size / transform.lossyScale, 10f * Time.deltaTime);
 
         }
     }
