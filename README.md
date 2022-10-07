@@ -1,8 +1,8 @@
 # Test Application for VITER LLC
 - Engine: Unity 2021.3.11f1
 - Platform: Android
-## Task
-[Click to show task] (https://view.officeapps.live.com/op/view.aspx?src=https://github.com/VyacheslavPridchin/VITER.TestApp/blob/main/Media/Task_Unity_v2.docx?raw=true)
+### Task
+[Click to show task](https://view.officeapps.live.com/op/view.aspx?src=https://github.com/VyacheslavPridchin/VITER.TestApp/blob/main/Media/Task_Unity_v2.docx?raw=true)
 ## Gameplay
 [Show full video](https://drive.google.com/file/d/1GFlTJvdsJaSnFhpWDKBIYr5-DzZkT0vP/view?usp=sharing)
 
