@@ -18,4 +18,4 @@
 - Поиск полностью заполненых "Карманов" по вертикали и горизонтали, а также анимация удаления "Серых квадратов" в случае полного совпадения ряда или столбца
 - Вывод результатов после переноса "Серого квадрата" на сетку "Карманов"
 ## Релиз
-[Открыть релиз](https://github.com/VyacheslavPridchin/VITER.TestApp/releases/tag/TestApp) или [Скачать релиз с Google](https://drive.google.com/file/d/1GcXUx-ODoZoI7HbNnPxFMP_gzHPAu_ZV/view?usp=sharing)
+[Открыть релиз](https://github.com/VyacheslavPridchin/VITER.TestApp/releases) или [Скачать релиз с Google](https://drive.google.com/file/d/1GcXUx-ODoZoI7HbNnPxFMP_gzHPAu_ZV/view?usp=sharing)
