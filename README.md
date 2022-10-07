@@ -1,6 +1,5 @@
-
 # Test Application for VITER LLC
-[🌍 Show document in English](README.md)
+[🌍 Показать документ на русском языке](README.ru.md)
 - Engine: Unity 2021.3.11f1
 - Platform: Android
 ### Task
