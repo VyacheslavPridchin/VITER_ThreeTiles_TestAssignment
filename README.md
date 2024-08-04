@@ -1,8 +1,8 @@
-# Test Application for VITER LLC
+# Test Assignment for VITER LLC
 [🌍 Показать документ на русском языке](README.ru.md)
 - Engine: Unity 2021.3.11f1
 - Platform: Android
-- 
+
 ### Task
 [Click to show task](https://view.officeapps.live.com/op/view.aspx?src=https://github.com/VyacheslavPridchin/VITER.TestApp/blob/main/Media/Task_Unity_v2.docx?raw=true)
 
