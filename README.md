@@ -18,4 +18,4 @@
 - Search for completely filled "Pockets" vertically and horizontally, as well as the animation of deleting "Gray Squares" in case of a complete match of a row or column
 - Output of results after transferring the "Grey Square" to the "Pockets" grid
 ## Release
-[Show release](https://github.com/VyacheslavPridchin/VITER.TestApp/releases) or [Show release on Google](https://drive.google.com/file/d/1GcXUx-ODoZoI7HbNnPxFMP_gzHPAu_ZV/view?usp=sharing)
+[Show release](https://github.com/VyacheslavPridchin/VITER.TestApp/releases)
